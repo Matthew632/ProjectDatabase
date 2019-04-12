@@ -1,0 +1,52 @@
+{
+  "name": "ProjectDatabase",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node listen.js",
+    "lint": "eslint ./ --fix",
+    "pre-commit": "npm t",
+    "posttest": "npm run lint",
+    "setup:dbs": "psql -f db/setup.sql",
+    "setup:tables": "psql -f db/tables.sql",
+    "seed": "psql -f db/seed.sql",
+    "migrate-make": "knex migrate:make",
+    "migrate-latest": "knex migrate:latest",
+    "migrate-rollback": "knex migrate:rollback",
+    "test": "mocha ./spec/*.spec.js",
+    "seed:prod": "NODE_ENV=production DB_URL=$(heroku config:get DATABASE_URL) knex seed:run",
+    "migrate:latest:prod": "NODE_ENV=production DB_URL=$(heroku config:get DATABASE_URL) knex migrate:latest",
+    "migrate:rollback:prod": "NODE_ENV=production DB_URL=$(heroku config:get DATABASE_URL) knex migrate:rollback"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Matthew632/ProjectDatabase.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Matthew632/ProjectDatabase/issues"
+  },
+  "homepage": "https://github.com/Matthew632/ProjectDatabase#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "knex": "^0.15.2",
+    "pg": "^7.6.1"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "eslint": "^5.9.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "husky": "^1.1.4",
+    "mocha": "^6.0.2",
+    "supertest": "^3.4.2"
+  },
+  "engines": {
+    "node": "11.9.0",
+    "npm": "6.8.0"
+  }
+}
