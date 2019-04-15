@@ -13,3 +13,9 @@ exports.insertRestaurantImage = input =>
     .insert(input)
     .into('images')
     .returning('*');
+
+exports.addRestaurant = input =>
+  connection
+    .insert(input)
+    .into('restaurants')
+    .returning('*');

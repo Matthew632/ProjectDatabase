@@ -1,7 +1,8 @@
 const {
   fetchRestaurant,
   fetchRestaurants,
-  insertRestaurantImage
+  insertRestaurantImage,
+  addRestaurant
 } = require('../models/restaurants');
 
 exports.getRestaurant = (req, res, next) => {
@@ -18,7 +19,7 @@ exports.getRestaurants = (req, res, next) => {
   });
 };
 
-exports.postRestaurant = (req, res, next) => {
+exports.postImage = (req, res, next) => {
   const body = req.body;
   const id = req.params;
   const input = {
@@ -26,9 +27,14 @@ exports.postRestaurant = (req, res, next) => {
     restaurant_id: id.restaurant_id
   };
 
-  console.log(input);
-
   insertRestaurantImage(input).then(([image]) => {
     res.status(201).send({ image });
+  });
+};
+
+exports.postRestaurant = (req, res, next) => {
+  const body = req.body;
+  addRestaurant(body).then(([restaurant]) => {
+    res.status(201).send({ restaurant });
   });
 };
