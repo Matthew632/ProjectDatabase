@@ -16,7 +16,7 @@ CREATE TABLE users (
 
 CREATE TABLE images (
     image_id SERIAL PRIMARY KEY,
-    image_path varchar(255),
+    image_paths TEXT [],
     user_id INTEGER REFERENCES users(user_id),
     restaurant_id INTEGER REFERENCES restaurants(restaurant_id)
 );
