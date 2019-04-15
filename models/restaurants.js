@@ -1,11 +1,15 @@
-const connection = require("../db/connection");
+const connection = require('../db/connection');
 
-const fetchRestaurant = params =>
+exports.fetchRestaurant = params =>
   connection
-    .select("image_paths")
-    .from("images")
+    .select('image_path')
+    .from('images')
     .where(params);
 
-module.exports = {
-  fetchRestaurant
-};
+exports.fetchRestaurants = () => connection.select('*').from('restaurants');
+
+exports.insertRestaurantImage = input =>
+  connection
+    .insert(input)
+    .into('images')
+    .returning('*');

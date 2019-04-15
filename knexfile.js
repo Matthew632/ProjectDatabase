@@ -1,13 +1,13 @@
 const { DB_URL } = process.env;
-const ENV = process.env.NODE_ENV || "development";
+const ENV = process.env.NODE_ENV || 'development';
 
 const baseConfig = {
-  client: "pg",
+  client: 'pg',
   migrations: {
-    directory: "./db"
+    directory: './db'
   },
   seeds: {
-    directory: "./db"
+    directory: './db'
   }
 };
 
@@ -17,16 +17,16 @@ const customConfigs = {
       production: {
         connection: `${DB_URL}?ssl=true`
       },
-      database: "final_project",
-      username: "matthew",
-      password: "password"
+      database: 'final_project',
+      username: 'tom',
+      password: 'zimorodek'
     }
   },
   test: {
     connection: {
-      database: "final_project",
-      username: "matthew",
-      password: "password"
+      database: 'final_project',
+      username: 'tom',
+      password: 'zimorodek'
     }
   },
   production: {
