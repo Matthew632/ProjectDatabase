@@ -7,10 +7,10 @@
     "start": "node listen.js",
     "pre-commit": "npm t",
     "posttest": "npm run lint",
-    "setup:dbs": "psql -f db/setup.sql",
     "migrate-make": "knex migrate:make",
     "migrate-latest": "knex migrate:latest",
     "migrate-rollback": "knex migrate:rollback",
+    "setup:dbs": "psql -f db/setup.sql && npm run migrate-latest",
     "test": "npm run migrate-rollback && npm run migrate-latest &&  mocha ./spec/*.spec.js",
     "seed:prod": "NODE_ENV=production DB_URL=$(heroku config:get DATABASE_URL) knex seed:run",
     "migrate:latest:prod": "NODE_ENV=production DB_URL=$(heroku config:get DATABASE_URL) knex migrate:latest",
@@ -31,6 +31,7 @@
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
     "knex": "^0.15.2",
+    "lint": "^1.1.2",
     "pg": "^7.6.1"
   },
   "devDependencies": {

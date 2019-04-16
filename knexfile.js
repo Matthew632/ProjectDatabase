@@ -5,12 +5,6 @@ const baseConfig = {
   client: 'pg',
   migrations: {
     directory: './db/migrations'
-  },
-  seeds: {
-    directory: './db',
-    migrations: {
-      directory: './db/migrations'
-    }
   }
 };
 
@@ -20,11 +14,9 @@ const customConfigs = {
       production: {
         connection: `${DB_URL}?ssl=true`
       },
-      seeds: {
-        directory: './db',
-        migrations: {
-          directory: './db/migrations'
-        }
+
+      migrations: {
+        directory: './db/migrations'
       },
       database: 'final_project',
       username: 'tom',
@@ -38,14 +30,15 @@ const customConfigs = {
       password: 'zimorodek'
     }
   },
-  seeds: {
-    directory: './db',
-    migrations: {
-      directory: './db/migrations'
-    }
+
+  migrations: {
+    directory: './db/migrations'
   },
   production: {
     connection: `${DB_URL}?ssl=true`
+  },
+  migrations: {
+    directory: './db/migrations'
   }
 };
 

@@ -20,6 +20,7 @@ exports.getRestaurants = (req, res, next) => {
 
 exports.postRestaurant = (req, res, next) => {
   const body = req.body;
+
   addRestaurant(body).then(([restaurant]) => {
     res.status(201).send({ restaurant });
   });

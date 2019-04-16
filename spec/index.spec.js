@@ -1,4 +1,3 @@
-const chai = require('chai');
 const { expect } = require('chai');
 const supertest = require('supertest');
 const app = require('../app');
@@ -29,7 +28,7 @@ describe('', () => {
       request
         .post('/api/restaurants')
         .send({
-          name: 'something else',
+          name: 'kfc',
           description: 'Great place to eat',
           photo_url: 'something@.com',
           address: 'm40 Lincoln street',
@@ -58,5 +57,58 @@ describe('', () => {
         .then(res => {
           expect(res.body.restaurants).lengthOf(2);
         }));
+    it('it should add new user to a database', () => {
+      request
+        .post('/api/users')
+        .send({
+          user_name: 'name',
+          first_name: 'first',
+          last_name: 'last',
+          restaurant_name: 'Printworks'
+        })
+        .expect(201)
+        .then(res => {
+          expect(res.body.user).to.contain.keys(
+            'user_id',
+            'user_name',
+            'last_name',
+            'restaurant_name'
+          );
+        });
+    });
+    it('should return  array of users', () =>
+      request
+        .get('/api/users')
+        .expect(200)
+        .then(res => {
+          expect(res.body.users).lengthOf(1);
+        }));
+    it('it should add new user to a database', () => {
+      request
+        .post('/api/users')
+        .send({
+          user_name: 'ss',
+          first_name: 'ss',
+          last_name: 'ss',
+          restaurant_name: 'kfc'
+        })
+        .expect(201)
+        .then(res => {
+          expect(res.body.user).to.contain.keys(
+            'user_id',
+            'user_name',
+            'last_name',
+            'restaurant_name'
+          );
+        });
+    });
+    it('should get user by id', () => {
+      request
+        .get('/api/user/1')
+        .expect(200)
+        .then(res => {
+          //console.log(res.body.user);
+        });
+    });
   });
 });
