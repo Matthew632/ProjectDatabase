@@ -2,7 +2,6 @@ const apiRouter = require('express').Router();
 const {
   getRestaurant,
   getRestaurants,
-  postImage,
   postRestaurant
 } = require('../controllers/restaurants');
 
@@ -11,9 +10,6 @@ apiRouter
   .get(getRestaurants)
   .post(postRestaurant);
 
-apiRouter
-  .route('/restaurant/:restaurant_id')
-  .get(getRestaurant)
-  .post(postImage);
+apiRouter.route('/restaurant/:restaurant_id').get(getRestaurant);
 
 module.exports = apiRouter;

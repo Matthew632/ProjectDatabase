@@ -10,41 +10,53 @@ describe('', () => {
   after(() => connection.destroy());
 
   describe('/restaurant /:restaurant_id', () => {
-    it('should return an array of 6 images', () =>
+    it('should add a new restaurant', () =>
       request
-        .get('/api/restaurant/1')
+        .post('/api/restaurants')
+        .send({
+          name: 'Printworks',
+          description: 'Great place to eat',
+          rating: 1,
+          photo_url: 'something@.com',
+          address: 'm40 Lincoln street',
+          link_to_360: 'something360.com'
+        })
+        .expect(201)
+        .then(res => {
+          expect(res.body.restaurant).to.contain.keys('restaurant_id', 'name');
+        }));
+    it('should add a new restaurant and add rating default to 0 ', () =>
+      request
+        .post('/api/restaurants')
+        .send({
+          name: 'something else',
+          description: 'Great place to eat',
+          photo_url: 'something@.com',
+          address: 'm40 Lincoln street',
+          link_to_360: 'something360.com'
+        })
+        .expect(201)
+        .then(res => {
+          expect(res.body.restaurant).to.contain.keys(
+            'restaurant_id',
+            'name',
+            'description',
+            'rating'
+          );
+        }));
+    it('should return restaurant by id', () =>
+      request
+        .get('/api/restaurant/2')
         .expect(200)
         .then(res => {
-          expect(res.body.restaurant.image_path).to.be.a('string');
+          expect(res.body.restaurant).to.be.a('object');
         }));
     it('should return an array of restaurants', () =>
       request
         .get('/api/restaurants')
         .expect(200)
         .then(res => {
-          expect(res.body.restaurants).lengthOf(3);
-        }));
-    it('should post new image url to existing restaurant', () =>
-      request
-        .post('/api/restaurant/2')
-        .send({ image_path: 'google.com' })
-        .expect(201)
-        .then(res => {
-          expect(res.body.image).to.be.a('object');
-        }));
-    it('should add a new restaurant', () =>
-      request
-        .post('/api/restaurants')
-        .send({
-          restaurant_name: 'Printworks',
-          restaurant_address: 'M24 fox street '
-        })
-        .expect(201)
-        .then(res => {
-          expect(res.body.restaurant).to.contain.keys(
-            'restaurant_id',
-            'restaurant_address'
-          );
+          expect(res.body.restaurants).lengthOf(2);
         }));
   });
 });

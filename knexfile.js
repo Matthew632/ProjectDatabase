@@ -4,10 +4,13 @@ const ENV = process.env.NODE_ENV || 'development';
 const baseConfig = {
   client: 'pg',
   migrations: {
-    directory: './db'
+    directory: './db/migrations'
   },
   seeds: {
-    directory: './db'
+    directory: './db',
+    migrations: {
+      directory: './db/migrations'
+    }
   }
 };
 
@@ -16,6 +19,12 @@ const customConfigs = {
     connection: {
       production: {
         connection: `${DB_URL}?ssl=true`
+      },
+      seeds: {
+        directory: './db',
+        migrations: {
+          directory: './db/migrations'
+        }
       },
       database: 'final_project',
       username: 'tom',
@@ -27,6 +36,12 @@ const customConfigs = {
       database: 'final_project',
       username: 'tom',
       password: 'zimorodek'
+    }
+  },
+  seeds: {
+    directory: './db',
+    migrations: {
+      directory: './db/migrations'
     }
   },
   production: {
