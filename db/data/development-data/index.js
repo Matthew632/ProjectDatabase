@@ -1,0 +1,1 @@
+exports.restaurantsData = require('./restaurants');

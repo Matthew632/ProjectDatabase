@@ -8,7 +8,7 @@ const connection = require('../db/connection');
 describe('', () => {
   after(() => connection.destroy());
 
-  describe('/restaurant /:restaurant_id', () => {
+  describe('/restaurants /:restaurant_id', () => {
     it('should add a new restaurant', () =>
       request
         .post('/api/restaurants')
@@ -45,7 +45,7 @@ describe('', () => {
         }));
     it('should return restaurant by id', () =>
       request
-        .get('/api/restaurant/2')
+        .get('/api/restaurants/2')
         .expect(200)
         .then(res => {
           expect(res.body.restaurant).to.be.a('object');
@@ -104,7 +104,7 @@ describe('', () => {
     });
     it('should get user by id', () => {
       request
-        .get('/api/user/1')
+        .get('/api/users/1')
         .expect(200)
         .then(res => {
           expect(res.body.user).to.be.a('object');
