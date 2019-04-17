@@ -107,7 +107,7 @@ describe('', () => {
         .get('/api/user/1')
         .expect(200)
         .then(res => {
-          //console.log(res.body.user);
+          expect(res.body.user).to.be.a('object');
         });
     });
   });

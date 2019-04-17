@@ -5,7 +5,7 @@ exports.up = function(knex, Promise) {
     restaurant_table.text('description').notNullable();
     restaurant_table.integer('rating').defaultTo(0);
     restaurant_table.string('photo_url', 400);
-    restaurant_table.string('address', 400).unique();
+    restaurant_table.string('address', 400);
     restaurant_table.string('link_to_360', 400).notNullable();
 
     restaurant_table
