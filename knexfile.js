@@ -14,7 +14,6 @@ const customConfigs = {
       production: {
         connection: `${DB_URL}?ssl=true`
       },
-
       migrations: {
         directory: './db/migrations'
       },
@@ -30,7 +29,6 @@ const customConfigs = {
       password: 'zimorodek'
     }
   },
-
   migrations: {
     directory: './db/migrations'
   },
