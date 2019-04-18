@@ -1,4 +1,4 @@
-const { restaurantsData } = require('../db/data');
+const { restaurantsData, helperTableData } = require('../db/data');
 
 exports.seed = (knex, Promise) =>
   knex.migrate
