@@ -18,7 +18,8 @@ module.exports = [
     photo_url:
       'https://images.unsplash.com/photo-1537114694023-b1460ac5af8c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1905&q=80',
     address: 'm40 Lincoln street',
-    link_to_360: 'something360.com'
+    link_to_360:
+      'https://firebasestorage.googleapis.com/v0/b/react-native-dev-f4b63.appspot.com/o/Images%2Fimage-1?alt=media&token=5ccd7387-b02e-4575-8184-74bb7f29f7c5'
   },
   {
     name: 'Fat Pig',
