@@ -1,1 +1,5 @@
-module.exports = [{ patched_id: 222 }];
+module.exports = [
+  {
+    patched_id: 222
+  }
+];

@@ -1,5 +1,4 @@
 const { restaurantsData, helperTableData } = require('../db/data');
-
 exports.seed = (knex, Promise) =>
   knex.migrate
     .rollback()
@@ -11,7 +10,7 @@ exports.seed = (knex, Promise) =>
         .returning('*')
     )
     .then(() => {
-      knex
+      return knex
         .insert(helperTableData)
         .into('helper_table')
         .returning('*');

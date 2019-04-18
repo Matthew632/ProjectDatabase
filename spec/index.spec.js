@@ -9,6 +9,16 @@ describe('', () => {
   after(() => connection.destroy());
 
   describe('/restaurants /:restaurant_id', () => {
+    it('should patch a table in helper table', () => {
+      request
+        .patch('/api/communication')
+        .send({ patched_id: 4444 })
+        .expect(201)
+        .then(res => {
+          console.log(res.body.id);
+          expect(res.body.id.patched_id).to.equal(4444);
+        });
+    });
     it('should add a new restaurant', () =>
       request
         .post('/api/restaurants')
@@ -78,13 +88,7 @@ describe('', () => {
           );
         });
     });
-    it('should return  array of users', () =>
-      request
-        .get('/api/users')
-        .expect(200)
-        .then(res => {
-          expect(res.body.users).lengthOf(1);
-        }));
+
     it('it should add new user to a database', () => {
       request
         .post('/api/users')

@@ -6,7 +6,10 @@ const {
 } = require('../controllers/restaurants');
 
 const { getUsers, postUser, getUser } = require('../controllers/users');
-const { getCommunicationId } = require('../controllers/communication');
+const {
+  getCommunicationId,
+  patchCommunicationId
+} = require('../controllers/communication');
 
 apiRouter
   .route('/restaurants')
@@ -22,7 +25,9 @@ apiRouter
 
 apiRouter.route('/users/:user_id').get(getUser);
 
-apiRouter.route('/communication').get(getCommunicationId);
-// .patch(patchCommunicationId);
+apiRouter
+  .route('/communication')
+  .get(getCommunicationId)
+  .patch(patchCommunicationId);
 
 module.exports = apiRouter;
