@@ -55,7 +55,9 @@ describe('', () => {
         .get('/api/restaurants')
         .expect(200)
         .then(res => {
-          expect(res.body.restaurants).lengthOf(2);
+          expect(res.body.restaurants).lengthOf(5);
+          expect(res.body.restaurants).to.be.a('array');
+          expect(res.body.restaurants[2]);
         }));
     it('it should add new user to a database', () => {
       request

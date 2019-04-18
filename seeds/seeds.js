@@ -9,4 +9,10 @@ exports.seed = (knex, Promise) =>
         .insert(restaurantsData)
         .into('restaurants')
         .returning('*')
-    );
+    )
+    .then(() => {
+      knex
+        .insert(helperTableData)
+        .into('helper_table')
+        .returning('*');
+    });

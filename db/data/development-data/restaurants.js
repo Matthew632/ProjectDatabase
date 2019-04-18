@@ -7,7 +7,8 @@ module.exports = [
     photo_url:
       'https://images.unsplash.com/photo-1521017432531-fbd92d768814?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80',
     address: 'm40 Lincoln street',
-    link_to_360: 'something360.com'
+    link_to_360:
+      'https://firebasestorage.googleapis.com/v0/b/react-native-dev-f4b63.appspot.com/o/projectroom.jpg?alt=media&token=6843c0cd-3087-47eb-8ed0-2632248ef3e1'
   },
   {
     name: 'Crazy Doughnuts',
