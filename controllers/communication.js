@@ -1,17 +1,18 @@
 const {
   fetchCommunicationId,
   patchCommunicationIdTable
-} = require('../models/communication');
+} = require("../models/communication");
 
 exports.getCommunicationId = (req, res, next) => {
-  fetchCommunicationId().then(([id]) => {
+  fetchCommunicationId().then(id => {
     res.status(200).send({ id });
   });
 };
 
 exports.patchCommunicationId = (req, res, next) => {
   const body = req.body.patched_id;
-  patchCommunicationIdTable(body).then(([id]) => {
+  const user = req.body.current_user_id || null;
+  patchCommunicationIdTable(body, user).then(([id]) => {
     res.status(201).send({ id });
   });
 };
