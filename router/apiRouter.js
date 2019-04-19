@@ -1,32 +1,36 @@
-const apiRouter = require('express').Router();
+const apiRouter = require("express").Router();
 const {
   getRestaurant,
   getRestaurants,
-  postRestaurant
-} = require('../controllers/restaurants');
+  postRestaurant,
+  editRating
+} = require("../controllers/restaurants");
 
-const { getUsers, postUser, getUser } = require('../controllers/users');
+const { getUsers, postUser, getUser } = require("../controllers/users");
 const {
   getCommunicationId,
   patchCommunicationId
-} = require('../controllers/communication');
+} = require("../controllers/communication");
 
 apiRouter
-  .route('/restaurants')
+  .route("/restaurants")
   .get(getRestaurants)
   .post(postRestaurant);
 
-apiRouter.route('/restaurants/:restaurant_id').get(getRestaurant);
+apiRouter
+  .route("/restaurants/:restaurant_id")
+  .get(getRestaurant)
+  .patch(editRating);
 
 apiRouter
-  .route('/users')
+  .route("/users")
   .get(getUsers)
   .post(postUser);
 
-apiRouter.route('/users/:user_id').get(getUser);
+apiRouter.route("/users/:user_id").get(getUser);
 
 apiRouter
-  .route('/communication')
+  .route("/communication")
   .get(getCommunicationId)
   .patch(patchCommunicationId);
 
