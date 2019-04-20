@@ -9,7 +9,7 @@ exports.up = function(knex, Promise) {
     restaurant_table.string("link_to_360", 400).notNullable();
     restaurant_table.float("latitude");
     restaurant_table.float("longitude");
-    restaurant_table.specificType("table_booking", "jsonb[]");
+    restaurant_table.specificType("table_booking", "jsonb");
 
     restaurant_table
       .date("created_at", 6)

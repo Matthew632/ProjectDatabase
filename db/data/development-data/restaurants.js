@@ -11,30 +11,10 @@ module.exports = [
       "https://firebasestorage.googleapis.com/v0/b/react-native-dev-f4b63.appspot.com/o/projectroom.jpg?alt=media&token=6843c0cd-3087-47eb-8ed0-2632248ef3e1",
     latitude: 53.483959,
     longitude: -2.244644,
-    table_booking: [
-      {
-        1: false,
-        2: true,
-        3: false,
-        4: false,
-        5: false,
-        6: false,
-        7: false,
-        8: false,
-        9: false
-      },
-      {
-        1: false,
-        2: false,
-        3: false,
-        4: false,
-        5: false,
-        6: false,
-        7: false,
-        8: false,
-        9: false
-      }
-    ]
+    table_booking: {
+      Table1: [false, false, false, false, false, false, false, false, false],
+      Table2: [false, false, false, false, false, false, false, false, false]
+    }
   },
   {
     name: "Crazy Doughnuts",
@@ -47,30 +27,10 @@ module.exports = [
     link_to_360: "something360.com",
     latitude: 53.483959,
     longitude: -2.244644,
-    table_booking: [
-      {
-        1: false,
-        2: true,
-        3: false,
-        4: false,
-        5: false,
-        6: false,
-        7: false,
-        8: false,
-        9: false
-      },
-      {
-        1: false,
-        2: false,
-        3: false,
-        4: false,
-        5: false,
-        6: false,
-        7: false,
-        8: false,
-        9: false
-      }
-    ]
+    table_booking: {
+      Table1: [false, false, false, false, false, false, false, false, false],
+      Table2: [false, false, false, false, false, false, false, false, false]
+    }
   },
   {
     name: "Fat Pig",
@@ -82,30 +42,10 @@ module.exports = [
     link_to_360: "something360.com",
     latitude: 53.483959,
     longitude: -2.244644,
-    table_booking: [
-      {
-        1: false,
-        2: true,
-        3: false,
-        4: false,
-        5: false,
-        6: false,
-        7: false,
-        8: false,
-        9: false
-      },
-      {
-        1: false,
-        2: false,
-        3: false,
-        4: false,
-        5: false,
-        6: false,
-        7: false,
-        8: false,
-        9: false
-      }
-    ]
+    table_booking: {
+      Table1: [false, false, false, false, false, false, false, false, false],
+      Table2: [false, false, false, false, false, false, false, false, false]
+    }
   },
   {
     name: "The Vogue",
@@ -117,29 +57,9 @@ module.exports = [
     link_to_360: "something360.com",
     latitude: 53.483959,
     longitude: -2.244644,
-    table_booking: [
-      {
-        1: false,
-        2: true,
-        3: false,
-        4: false,
-        5: false,
-        6: false,
-        7: false,
-        8: false,
-        9: false
-      },
-      {
-        1: false,
-        2: false,
-        3: false,
-        4: false,
-        5: false,
-        6: false,
-        7: false,
-        8: false,
-        9: false
-      }
-    ]
+    table_booking: {
+      Table1: [false, false, false, false, false, false, false, false, false],
+      Table2: [false, false, false, false, false, false, false, false, false]
+    }
   }
 ];
