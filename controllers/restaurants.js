@@ -1,8 +1,9 @@
 const {
   fetchRestaurants,
   addRestaurant,
-  fetchRestaurant
-} = require('../models/restaurants');
+  fetchRestaurant,
+  patchRating
+} = require("../models/restaurants");
 
 exports.getRestaurant = (req, res, next) => {
   const restaurant_id = req.params;
@@ -23,5 +24,12 @@ exports.postRestaurant = (req, res, next) => {
 
   addRestaurant(body).then(([restaurant]) => {
     res.status(201).send({ restaurant });
+  });
+};
+
+exports.editRating = (req, res, next) => {
+  const { rating } = req.body;
+  patchRating(req.params, rating).then(patchedRating => {
+    res.status(200).send({ rating: patchedRating[0] });
   });
 };
