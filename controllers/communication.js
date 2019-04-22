@@ -4,7 +4,8 @@ const {
 } = require('../models/communication');
 
 exports.getCommunicationId = (req, res, next) => {
-  fetchCommunicationId().then(id => {
+  fetchCommunicationId().then(([id]) => {
+    console.log(id);
     res.status(200).send({ id });
   });
 };
