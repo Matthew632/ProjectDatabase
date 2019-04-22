@@ -1,5 +1,6 @@
 module.exports = [
   {
-    patched_id: 222
+    patched_id: 1,
+    patched_table_id: null
   }
 ];

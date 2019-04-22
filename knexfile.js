@@ -18,14 +18,14 @@ const customConfigs = {
         directory: './db/migrations'
       },
       database: 'final_project',
-      username: 'matthew',
+      username: 'tom',
       password: 'zimorodek'
     }
   },
   test: {
     connection: {
       database: 'final_project',
-      username: 'matthew',
+      username: 'tom',
       password: 'zimorodek'
     }
   },
