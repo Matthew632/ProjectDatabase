@@ -16,11 +16,13 @@ module.exports = [
       Table2: [false, false, false, false, false, false, false, false, false]
     },
     pointer_location: {
-      table1: [1, -6, -1, -2],
-      table2: [2, -7, 0, 2],
-      table3: [3, -3, 0, 3],
-      table4: [4, -4, 1.5, 8],
-      table5: [5, -7.5, 2.25, 8]
+      tables: [
+        { id: 1, coordinates: [-6, -1, -2] },
+        { id: 2, coordinates: [-7, 0, 2] },
+        { id: 3, coordinates: [-3, 0, 3] },
+        { id: 4, coordinates: [-4, 1.5, 8] },
+        { id: 5, coordinates: [-7.5, 2.25, 8] }
+      ]
     }
   },
   {
