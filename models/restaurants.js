@@ -1,23 +1,23 @@
-const connection = require("../db/connection");
+const connection = require('../db/connection');
 
 exports.fetchRestaurant = restaurant_id =>
   connection
-    .select("*")
-    .from("restaurants")
+    .select('*')
+    .from('restaurants')
     .where(restaurant_id);
 
-exports.fetchRestaurants = () => connection.select("*").from("restaurants");
+exports.fetchRestaurants = () => connection.select('*').from('restaurants');
 
 exports.addRestaurant = input =>
   connection
     .insert(input)
-    .into("restaurants")
-    .returning("*");
+    .into('restaurants')
+    .returning('*');
 
-exports.patchRating = (restaurant_id, rating) =>
+exports.patchRating = (restaurant_id, booking) =>
   connection
-    .select("*")
-    .from("restaurants")
+    .select('*')
+    .from('restaurants')
     .where(restaurant_id)
-    .update({ rating: rating })
-    .returning("*");
+    .update({ table_booking: booking })
+    .returning('*');

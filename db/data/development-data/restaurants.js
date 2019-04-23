@@ -8,20 +8,332 @@ module.exports = [
       'https://images.unsplash.com/photo-1521017432531-fbd92d768814?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80',
     address: 'm40 Lincoln street',
     link_to_360:
-      'https://firebasestorage.googleapis.com/v0/b/react-native-dev-f4b63.appspot.com/o/projectroom.jpg?alt=media&token=6843c0cd-3087-47eb-8ed0-2632248ef3e1',
+      'https://firebasestorage.googleapis.com/v0/b/react-native-dev-f4b63.appspot.com/o/gather_and_gather.jpeg?alt=media&token=700b966b-49d9-431c-9b4a-567cab57fcd0',
     latitude: 53.483959,
     longitude: -2.244644,
     table_booking: {
-      Table1: [false, false, false, false, false, false, false, false, false],
-      Table2: [false, false, false, false, false, false, false, false, false]
+      Monday: [
+        {
+          id: 1,
+          hours: [
+            {
+              1: true,
+              2: false,
+              3: false,
+              4: false,
+              5: false,
+              6: true,
+              6: false,
+              8: false,
+              9: false,
+              10: false
+            }
+          ]
+        },
+        {
+          id: 2,
+          hours: [
+            {
+              1: true,
+              2: false,
+              3: false,
+              4: false,
+              5: false,
+              6: true,
+              6: false,
+              8: false,
+              9: false,
+              10: false
+            }
+          ]
+        },
+        {
+          id: 3,
+          hours: [
+            {
+              1: true,
+              2: false,
+              3: false,
+              4: false,
+              5: false,
+              6: true,
+              6: false,
+              8: false,
+              9: false,
+              10: false
+            }
+          ]
+        },
+        {
+          id: 4,
+          hours: [
+            {
+              1: true,
+              2: false,
+              3: false,
+              4: false,
+              5: false,
+              6: true,
+              6: false,
+              8: false,
+              9: false,
+              10: false
+            }
+          ]
+        },
+        {
+          id: 5,
+          hours: [
+            {
+              1: true,
+              2: false,
+              3: false,
+              4: false,
+              5: false,
+              6: true,
+              6: false,
+              8: false,
+              9: false,
+              10: false
+            }
+          ]
+        },
+        {
+          id: 6,
+          hours: [
+            {
+              1: true,
+              2: false,
+              3: false,
+              4: false,
+              5: false,
+              6: true,
+              6: false,
+              8: false,
+              9: false,
+              10: false
+            }
+          ]
+        },
+        {
+          id: 7,
+          hours: [
+            {
+              1: true,
+              2: false,
+              3: false,
+              4: false,
+              5: false,
+              6: true,
+              6: false,
+              8: false,
+              9: false,
+              10: false
+            }
+          ]
+        },
+        {
+          id: 8,
+          hours: [
+            {
+              1: true,
+              2: false,
+              3: false,
+              4: false,
+              5: false,
+              6: true,
+              6: false,
+              8: false,
+              9: false,
+              10: false
+            }
+          ]
+        },
+        {
+          id: 9,
+          hours: [
+            {
+              1: true,
+              2: false,
+              3: false,
+              4: false,
+              5: false,
+              6: true,
+              6: false,
+              8: false,
+              9: false,
+              10: false
+            }
+          ]
+        }
+      ],
+      Tuesday: [
+        {
+          id: 1,
+          hours: [
+            {
+              1: true,
+              2: false,
+              3: false,
+              4: false,
+              5: false,
+              6: true,
+              6: false,
+              8: false,
+              9: false,
+              10: false
+            }
+          ]
+        },
+        {
+          id: 2,
+          hours: [
+            {
+              1: true,
+              2: false,
+              3: false,
+              4: false,
+              5: false,
+              6: true,
+              6: false,
+              8: false,
+              9: false,
+              10: false
+            }
+          ]
+        },
+        {
+          id: 3,
+          hours: [
+            {
+              1: true,
+              2: false,
+              3: false,
+              4: false,
+              5: false,
+              6: true,
+              6: false,
+              8: false,
+              9: false,
+              10: false
+            }
+          ]
+        },
+        {
+          id: 4,
+          hours: [
+            {
+              1: true,
+              2: false,
+              3: false,
+              4: false,
+              5: false,
+              6: true,
+              6: false,
+              8: false,
+              9: false,
+              10: false
+            }
+          ]
+        },
+        {
+          id: 5,
+          hours: [
+            {
+              1: true,
+              2: false,
+              3: false,
+              4: false,
+              5: false,
+              6: true,
+              6: false,
+              8: false,
+              9: false,
+              10: false
+            }
+          ]
+        },
+        {
+          id: 6,
+          hours: [
+            {
+              1: true,
+              2: false,
+              3: false,
+              4: false,
+              5: false,
+              6: true,
+              6: false,
+              8: false,
+              9: false,
+              10: false
+            }
+          ]
+        },
+        {
+          id: 7,
+          hours: [
+            {
+              1: true,
+              2: false,
+              3: false,
+              4: false,
+              5: false,
+              6: true,
+              6: false,
+              8: false,
+              9: false,
+              10: false
+            }
+          ]
+        },
+        {
+          id: 8,
+          hours: [
+            {
+              1: true,
+              2: false,
+              3: false,
+              4: false,
+              5: false,
+              6: true,
+              6: false,
+              8: false,
+              9: false,
+              10: false
+            }
+          ]
+        },
+        {
+          id: 9,
+          hours: [
+            {
+              1: true,
+              2: false,
+              3: false,
+              4: false,
+              5: false,
+              6: true,
+              6: false,
+              8: false,
+              9: false,
+              10: false
+            }
+          ]
+        }
+      ]
     },
     pointer_location: {
       tables: [
-        { id: 1, coordinates: [-6, -1, -2] },
-        { id: 2, coordinates: [-7, 0, 2] },
-        { id: 3, coordinates: [-3, 0, 3] },
-        { id: 4, coordinates: [-4, 1.5, 8] },
-        { id: 5, coordinates: [-7.5, 2.25, 8] }
+        { id: 1, coordinates: [3.5, -2.5, -4] },
+        { id: 2, coordinates: [2.5, -1.5, 0.25] },
+        { id: 3, coordinates: [7, -1, -0.5] },
+        { id: 4, coordinates: [8, -0.25, 3.5] },
+        { id: 5, coordinates: [2.5, 0.5, 3.5] },
+        { id: 6, coordinates: [8, 1, 9] },
+        { id: 7, coordinates: [4, 1.6, 10] },
+        { id: 8, coordinates: [-3, 2, 10] },
+        { id: 9, coordinates: [-5, 3, -10] }
       ]
     }
   },
